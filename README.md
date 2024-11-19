@@ -100,13 +100,25 @@ You should now be able to see the application running locally.
 3. Search for campsites or create your custom checklist.
 
 ## Screenshots
+Here a few screenshots of the application:
+### Home Page
+![Home Page](./images/Screenshot%202024-11-19%20200059.jpg)
+### Steps on how to proceed
+![Steps Image](./images/Image2.jpg)
+### Shop Camping Equipments
+![Camping Image](./images/Image3.jpg)
+### Personalized Trip Planner
+![Camping Image](./images/Image4.jpg)
+### User Registration Page
+![Camping Image](./images/Image5.jpg)
+
 
 ## Technologies Used
--**Backend**: Node.js, Express.js, MySQL, MySQL2
--**Frontend**: HTML, CSS, JavaScript
--**Package Management**: npm
--**Version Control**: Git, GitHub
--**Data Parsing**: express.json(), express.urlencoded()
+- **Backend**: Node.js, Express.js, MySQL, MySQL2
+- **Frontend**: HTML, CSS, JavaScript
+- **Package Management**: npm
+- **Version Control**: Git, GitHub
+- **Data Parsing**: express.json(), express.urlencoded()
 
 ## Author
 - [Ann Marry John](https://github.com/AnnMarryJohn001) - Initial work
