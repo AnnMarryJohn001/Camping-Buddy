@@ -25,4 +25,92 @@ git clone https://github.com/AnnMarryJohn001/Camping-Buddy.git
 ### 2.Navigate to the Project Directory
 Once the repository is cloned, navigate into the project folder:
 ```bash
-cd Camping-Buddy
+cd Camping-Buddy/trekking-master/trekking-master
+```
+### 3. Install Dependencies
+Ensure that Node.js and npm are installed on your system. If you don't have them, you can download and install them from Node.js official website.
+Once you have Node.js installed, run the following command to install the necessary dependencies:
+```bash
+npm install
+```
+### 4. Set Up MySQL Database
+Make sure you have MySQL installed and running on your local machine. You can download it from MySQL official website.
+#### 4.1. Create a Database
+Log in to MySQL and create a new database named camping:
+```bash
+CREATE DATABASE camping;
+```
+#### 4.2. Create Tables
+After creating the database, create the necessary tables by running the following SQL queries in your MySQL terminal:
+```bash
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(20),
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    campingsite VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE reviews (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    campsitename VARCHAR(255) NOT NULL,
+    state VARCHAR(100),
+    country VARCHAR(100),
+    comments TEXT,
+    activities TEXT,
+    rating INT NOT NULL
+);
+```
+#### 4.3. Configure Database Connection
+In the project directory, open the app.js file and locate the MySQL connection settings:
+```bash
+const db = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'MyNewPass',  // Change this to your local MySQL password
+  database: 'camping',
+});
+```
+Replace 'MyNewPass' with the password for your MySQL root user (or a specific MySQL user if you're using one).
+
+### 5. Start the Application
+Start the application with the following command:
+```bash
+node app.js
+```
+
+### 6. Access the Application
+Once the server is running, open your browser and navigate to:
+```bash
+http://localhost:3000
+```
+You should now be able to see the application running locally.
+
+## Usage
+1. Open the application in your browser at `http://localhost:3000`.
+2. Sign up or log in to start exploring features.
+3. Search for campsites or create your custom checklist.
+
+## Screenshots
+
+## Technologies Used
+-**Backend**: Node.js, Express.js, MySQL, MySQL2
+-**Frontend**: HTML, CSS, JavaScript
+-**Package Management**: npm
+-**Version Control**: Git, GitHub
+-**Data Parsing**: express.json(), express.urlencoded()
+
+## Author
+- [Ann Marry John](https://github.com/AnnMarryJohn001) - Initial work
+  
+
+
+
